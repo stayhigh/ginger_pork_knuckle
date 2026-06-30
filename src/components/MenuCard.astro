@@ -1,0 +1,66 @@
+---
+export interface Props {
+  id: string;
+  name: string;
+  nameEn: string;
+  category: string;
+  description: string;
+  process: string[];
+  price: string;
+  image: string;
+  alt: string;
+  reversed?: boolean;
+}
+
+const { name, nameEn, category, description, process, image, alt, reversed = false } = Astro.props;
+---
+
+<div class="group grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+  <!-- Image -->
+  <div class={`relative ${reversed ? 'md:order-2' : ''} overflow-hidden rounded-2xl shadow-xl`}>
+    <img
+      src={image}
+      alt={alt}
+      class="w-full h-full object-cover aspect-[4/3] hover:scale-105 transition-transform duration-500"
+      loading="lazy"
+    />
+    <!-- Category Badge -->
+    <span class="absolute top-4 left-4 px-3 py-1 bg-primary/90 backdrop-blur-sm text-text-primary text-xs font-bold rounded-full">
+      {category}
+    </span>
+  </div>
+
+  <!-- Content -->
+  <div class={reversed ? 'md:order-1' : ''}>
+    <p class="text-primary font-medium text-sm tracking-wider uppercase mb-1">{nameEn}</p>
+    <h3 class="text-2xl md:text-3xl font-bold font-heading text-text-primary mb-2">{name}</h3>
+    <div class="w-12 h-0.5 bg-primary mb-4"></div>
+
+    <p class="text-text-secondary leading-relaxed mb-6">{description}</p>
+
+    <!-- Process Steps -->
+    <div class="mb-6">
+      <h4 class="text-sm font-bold text-text-primary mb-3">製作工藝</h4>
+      <ul class="space-y-2">
+        {process.map((step, i) => (
+          <li class="flex items-start gap-2">
+            <span class="w-5 h-5 rounded-full bg-primary/20 text-primary text-xs flex items-center justify-center shrink-0 mt-0.5 font-bold">
+              {i + 1}
+            </span>
+            <span class="text-sm text-text-secondary">{step}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <a
+      href="/contact"
+      class="inline-flex items-center gap-2 px-6 py-2.5 bg-primary hover:bg-primary-dark text-text-primary font-medium rounded-full transition-all"
+    >
+      立即預訂
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+  </div>
+</div>

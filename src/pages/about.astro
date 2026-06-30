@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { STORE_INFO } from '../utils/constants';
+---
+
+<Layout title="關於我們" description="瞭解虾姑猪脚姜的品牌故事、創立緣起與經營理念，以及與小榄鎮傳統飲食文化的連結。">
+  <fragment slot="header"><Header /></fragment>
+
+  <!-- Page Header -->
+  <section class="relative py-20 md:py-28 bg-gradient-to-br from-text-primary to-secondary-dark overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 75% 25%, #D4A04A 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-black font-heading text-white text-shadow-lg mb-4">關於我們</h1>
+      <p class="text-lg text-background-alt/80">傳承粵式經典 · 守護傳統美味</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-16 md:py-24 bg-background">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Brand Story -->
+      <div class="mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-12">
+          <div>
+            <h2 class="text-3xl font-bold font-heading text-text-primary mb-6">品牌故事</h2>
+            <div class="prose prose-stone max-w-none text-text-secondary leading-relaxed space-y-4">
+              <p>
+                <strong class="text-text-primary">{STORE_INFO.name}</strong> 誕生於廣東省中山市小榄鎮這片美食沃土。
+                店名中的「虾姑」為粵語中對「瀨尿蝦」（螳螂蝦）的親切稱呼，與「猪脚姜」並列，
+                代表著我們對粵式傳統美食的深厚情感與創新精神。
+              </p>
+              <p>
+                小榄鎮以菊花宴等傳統飲食文化聞名遐邇，我們深感榮幸能在此美食重鎮立足。
+                創辦人從小在粵式廚房長大，深知一碗好的豬腳薑、一份正宗的沙薑豬腳，
+                承載的不只是味道，更是幾代廣東人的飲食記憶與情感連結。
+              </p>
+              <p>
+                我們堅持選用新鮮食材，遵循傳統工序，從不馬虎。
+                每一道菜端上餐桌前，都經過反覆的測試與調整，只為呈現最道地的粵式豬腳風味。
+              </p>
+            </div>
+          </div>
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src="/images/gallery/restaurant-interior.jpg"
+              alt="傳統粵式廚房氛圍"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold font-heading text-text-primary text-center mb-10">我們的堅持</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt text-center">
+            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-text-primary mb-2">新鮮食材</h3>
+            <p class="text-sm text-text-secondary">每日嚴選新鮮豬腳與優質配料，確保每一道菜的品質與口感。</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt text-center">
+            <div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-text-primary mb-2">匠心工藝</h3>
+            <p class="text-sm text-text-secondary">從焯水、燉煮到冰水浸泡，每道工序都嚴格把關，追求極致口感。</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt text-center">
+            <div class="w-14 h-14 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-text-primary mb-2">傳統風味</h3>
+            <p class="text-sm text-text-secondary">傳承粵式經典配方，保留老廣東記憶中的道地味道。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- XiaoLan Culture -->
+      <div>
+        <h2 class="text-3xl font-bold font-heading text-text-primary text-center mb-8">小榄美食文化</h2>
+        <div class="bg-background-alt rounded-2xl p-8 md:p-10">
+          <div class="prose prose-stone max-w-none text-text-secondary leading-relaxed space-y-4">
+            <p>
+              小榄鎮，位於廣東省中山市，是一座擁有悠久飲食文化歷史的千年古鎮。
+              這裡以「菊花宴」聞名於世，每年秋季的小榄菊花會吸引無數遊客前來觀賞與品嚐。
+            </p>
+            <p>
+              在這片飲食文化的沃土上，<strong class="text-text-primary">{STORE_INFO.name}</strong> 以粵式豬腳專家的身份，
+              為小榄的美食版圖增添了一道獨特的風景線。我們的沙薑豬腳與豬腳薑，
+              正是粵式飲食文化中「藥食同源」理念的生動體現——既是美味佳餚，也是滋補養生之選。
+            </p>
+          </div>
+          <div class="mt-6 flex justify-center">
+            <div class="aspect-[16/9] max-w-lg w-full rounded-xl overflow-hidden shadow-lg">
+              <img src="/images/gallery/asian-food-platter.jpg" alt="小榄飲食文化" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <fragment slot="footer"><Footer /></fragment>
+</Layout>

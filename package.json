@@ -1,0 +1,22 @@
+{
+  "name": "shrimp-pigfoot-website",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "虾姑猪脚姜 — 官方品牌網站",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "wrangler pages deploy dist"
+  },
+  "dependencies": {
+    "astro": "^7.0.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^6.0.3",
+    "wrangler": "^4.105.0"
+  }
+}

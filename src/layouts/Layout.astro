@@ -1,0 +1,49 @@
+---
+import '../styles/global.css';
+import { STORE_INFO } from '../utils/constants';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description, image } = Astro.props;
+const pageTitle = title ? `${title} | ${STORE_INFO.name}` : `${STORE_INFO.name} | ${STORE_INFO.subtitle}`;
+const pageDesc = description || STORE_INFO.description;
+---
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={pageDesc} />
+    <meta name="keywords" content={STORE_INFO.keywords} />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:type" content="restaurant.menu" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content={STORE_INFO.name} />
+    {image && <meta property="og:image" content={image} />}
+
+    <!-- Canonical -->
+    <link rel="canonical" href={Astro.url.href} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/images/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" />
+
+    <title>{pageTitle}</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <slot name="header" />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <slot name="footer" />
+  </body>
+</html>

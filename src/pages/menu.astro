@@ -1,0 +1,194 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { MENU_ITEMS } from '../utils/constants';
+---
+
+<Layout title="菜單介紹" description="探索虾姑猪脚姜的招牌菜單：沙薑豬腳（肉質脆爽、沙薑香氣濃郁）與豬腳薑（甜中帶辣、膠質豐富），兩大粵式豬腳經典做法。">
+  <fragment slot="header"><Header /></fragment>
+
+  <!-- Page Header -->
+  <section class="relative py-20 md:py-28 bg-gradient-to-br from-text-primary via-secondary-dark to-text-primary overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 50% 50%, #D4A04A 1px, transparent 1px); background-size: 30px 30px;"></div>
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-black font-heading text-white text-shadow-lg mb-4">菜單介紹</h1>
+      <p class="text-lg text-background-alt/80">一店雙味 · 兩大粵式豬腳經典做法</p>
+    </div>
+  </section>
+
+  <!-- Sha Jiang Pig Foot Section -->
+  <section class="py-16 md:py-20 bg-background">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-16">
+        <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-background-alt to-primary/10 flex items-center justify-center shadow-lg order-1">
+          <div class="text-center p-8">
+            <span class="text-7xl">🥩</span>
+            <p class="text-text-secondary text-sm mt-4">沙薑豬腳 — 實物示意</p>
+            <p class="text-text-secondary/60 text-xs mt-1">（圖片來源：FoodiesFeed）</p>
+          </div>
+        </div>
+        <div class="order-2">
+          <p class="text-primary font-medium text-sm tracking-wider uppercase mb-1">Signature Cold Dish</p>
+          <h2 class="text-3xl md:text-4xl font-bold font-heading text-text-primary mb-2">沙薑豬腳</h2>
+          <div class="w-16 h-0.5 bg-primary mb-6"></div>
+
+          <div class="space-y-4 text-text-secondary leading-relaxed">
+            <p>
+              <strong class="text-text-primary">沙薑豬腳</strong> 是店內最具人氣的招牌菜之一。
+              沙薑（又稱山奈）的獨特辛香，與豬腳的膠質Q彈完美融合，是一道令人回味無窮的粵式涼菜。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Details -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt">
+          <h3 class="text-lg font-bold font-heading text-text-primary mb-3 flex items-center gap-2">
+            <span class="text-2xl">👅</span> 口感特色
+          </h3>
+          <p class="text-sm text-text-secondary">肉質脆爽、Q彈緊緻，每一口都能感受到豬腳的膠質與彈性，令人回味無窮。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt">
+          <h3 class="text-lg font-bold font-heading text-text-primary mb-3 flex items-center gap-2">
+            <span class="text-2xl">🌿</span> 風味亮點
+          </h3>
+          <p class="text-sm text-text-secondary">沙薑香氣濃郁，辛香與鮮味完美融合。沙薑碎爆香後混合生抽、白糖、高湯，層次豐富。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt">
+          <h3 class="text-lg font-bold font-heading text-text-primary mb-3 flex items-center gap-2">
+            <span class="text-2xl">⚙️</span> 製作工序
+          </h3>
+          <ul class="space-y-1">
+            <li class="flex items-center gap-2 text-sm text-text-secondary">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+              焯水去腥
+            </li>
+            <li class="flex items-center gap-2 text-sm text-text-secondary">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+              高壓燉煮至軟嫩
+            </li>
+            <li class="flex items-center gap-2 text-sm text-text-secondary">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+              冰水浸泡使肉質緊緻
+            </li>
+            <li class="flex items-center gap-2 text-sm text-text-secondary">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary shrink-0"></span>
+              沙薑碎爆香調味
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cultural Note -->
+      <div class="bg-background-alt rounded-2xl p-6 md:p-8">
+        <h3 class="text-lg font-bold font-heading text-text-primary mb-3">📖 文化意涵</h3>
+        <p class="text-text-secondary text-sm leading-relaxed">
+          豬腳在粵式飲食文化中象徵「發財就手」，是廣東年夜飯中不可或缺的傳統菜餚。
+          沙薑豬腳作為粵式涼菜的代表，將這份吉祥寓意與清爽口感完美結合，
+          既是日常美食，也是節日餐桌上的亮點。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ginger Vinegar Pig Foot Section -->
+  <section class="py-16 md:py-20 bg-background-alt">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center mb-16">
+        <div>
+          <p class="text-primary font-medium text-sm tracking-wider uppercase mb-1">Traditional Comfort Food</p>
+          <h2 class="text-3xl md:text-4xl font-bold font-heading text-text-primary mb-2">豬腳薑</h2>
+          <div class="w-16 h-0.5 bg-primary mb-6"></div>
+
+          <div class="space-y-4 text-text-secondary leading-relaxed">
+            <p>
+              <strong class="text-text-primary">豬腳薑</strong> 是粵式傳統滋補美食的代表，
+              以豬腳、老薑、雞蛋和甜醋慢火燜煮而成。甜中帶辣、膠質豐富，
+              既是產婦坐月子的傳統補品，也是冬季暖身的街頭美食。
+            </p>
+          </div>
+        </div>
+        <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-accent/5 to-secondary/10 flex items-center justify-center shadow-lg">
+          <div class="text-center p-8">
+            <span class="text-7xl">🍲</span>
+            <p class="text-text-secondary text-sm mt-4">豬腳薑 — 瓦煲燜煮</p>
+            <p class="text-text-secondary/60 text-xs mt-1">（圖片來源：FoodiesFeed）</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Details -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt">
+          <h3 class="text-lg font-bold font-heading text-text-primary mb-3 flex items-center gap-2">
+            <span class="text-2xl">👅</span> 口感特色
+          </h3>
+          <p class="text-sm text-text-secondary">甜中帶辣，膠質豐富。燜煮至軟嫩的豬腳吸收甜醋的精華，入口即化，暖胃又滿足。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt">
+          <h3 class="text-lg font-bold font-heading text-text-primary mb-3 flex items-center gap-2">
+            <span class="text-2xl">🌿</span> 食材與工序
+          </h3>
+          <p class="text-sm text-text-secondary">選用老薑切厚片炒香，豬腳焯水後與甜醋、雞蛋一同放入瓦煲，慢火燜煮至入味。</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-md border border-background-alt">
+          <h3 class="text-lg font-bold font-heading text-text-primary mb-3 flex items-center gap-2">
+            <span class="text-2xl">💪</span> 功效說明
+          </h3>
+          <ul class="space-y-1">
+            <li class="flex items-center gap-2 text-sm text-text-secondary">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+              開胃提神
+            </li>
+            <li class="flex items-center gap-2 text-sm text-text-secondary">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+              補血補鈣
+            </li>
+            <li class="flex items-center gap-2 text-sm text-text-secondary">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+              養顏美膚
+            </li>
+            <li class="flex items-center gap-2 text-sm text-text-secondary">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+              驅寒暖身
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cultural Note -->
+      <div class="bg-white rounded-2xl p-6 md:p-8 shadow-md border border-background-alt">
+        <h3 class="text-lg font-bold font-heading text-text-primary mb-3">📖 文化意涵</h3>
+        <p class="text-text-secondary text-sm leading-relaxed">
+          豬腳薑是廣東產婦坐月子的傳統補品，被認為有驅風散寒、補充膠質之效。
+          隨著時代演變，這道充滿溫暖記憶的美食已成為廣東人冬季餐桌上的常見菜餚，
+          甚至衍生出「豬腳薑配飯」的街頭美食文化，深受男女老少的喜愛。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-background text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-3xl font-bold font-heading text-text-primary mb-4">
+        想品嚐最道地的粵式豬腳美味？
+      </h2>
+      <p class="text-text-secondary mb-8">
+        歡迎來店或致電預訂，體驗沙薑豬腳的Q彈與豬腳薑的溫潤
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="px-8 py-3.5 bg-primary hover:bg-primary-dark text-text-primary font-bold rounded-full transition-all shadow-lg">
+          聯絡我們
+        </a>
+        <a href="tel:18688647083" class="px-8 py-3.5 bg-accent hover:bg-accent-dark text-white font-bold rounded-full transition-all shadow-lg">
+          立即致電 186-8864-7083
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <fragment slot="footer"><Footer /></fragment>
+</Layout>
