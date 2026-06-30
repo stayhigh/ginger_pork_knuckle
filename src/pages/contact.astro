@@ -105,19 +105,17 @@ import { STORE_INFO } from '../utils/constants';
 
   <!-- Map Section -->
   <section class="pb-16 bg-background">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold font-heading text-text-primary mb-6">店面位置</h2>
-      <div class="rounded-2xl overflow-hidden shadow-lg border border-background-alt aspect-[16/9] md:aspect-[21/9]">
-        <iframe
-          class="w-full h-full min-h-[350px]"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSy...17R8&q=${encodeURIComponent(STORE_INFO.mapQuery)}`}
-          title="Google Maps - 店家位置"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
+  <!-- Map -->
+  <div class="rounded-2xl overflow-hidden shadow-lg border border-background-alt aspect-[4/3] lg:aspect-auto">
+	<iframe
+	class="w-full h-full min-h-[300px]"
+	loading="lazy"
+	referrerpolicy="no-referrer-when-downgrade"
+	src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(STORE_INFO.mapQuery)}`}
+	title="店家位置"
+	allowfullscreen
+	></iframe>
+  </div>
   </section>
 
   <fragment slot="footer"><Footer /></fragment>
