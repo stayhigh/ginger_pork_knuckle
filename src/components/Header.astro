@@ -2,11 +2,11 @@
 import { STORE_INFO } from '../utils/constants';
 
 const navItems = [
-  { label: '首頁', href: '/' },
-  { label: '關於我們', href: '/about' },
-  { label: '菜單介紹', href: '/menu' },
+  { label: '首页', href: '/' },
+  { label: '关于我们', href: '/about' },
+  { label: '菜单介绍', href: '/menu' },
   { label: '美食文化', href: '/culture' },
-  { label: '聯絡我們', href: '/contact' },
+  { label: '联络我们', href: '/contact' },
 ];
 ---
 
@@ -20,7 +20,7 @@ const navItems = [
           <span class="text-lg md:text-xl font-bold font-heading text-text-primary group-hover:text-primary transition-colors">
             {STORE_INFO.name}
           </span>
-          <span class="text-xs text-text-secondary hidden sm:block">正宗粵式 · 一店雙味</span>
+          <span class="text-xs text-text-secondary hidden sm:block">正宗粤式 · 一店双味</span>
         </div>
       </a>
 
@@ -39,12 +39,12 @@ const navItems = [
           class="ml-3 px-4 py-2 bg-accent hover:bg-accent-dark text-white text-sm font-medium rounded-full transition-colors flex items-center gap-1.5"
         >
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          立即致電
+          立即致电
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button id="menu-toggle" class="md:hidden p-2 rounded-lg text-text-secondary hover:bg-background-alt transition-colors" aria-label="打開選單">
+      <button id="menu-toggle" class="md:hidden p-2 rounded-lg text-text-secondary hover:bg-background-alt transition-colors" aria-label="打开选单">
         <svg id="menu-icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -71,7 +71,7 @@ const navItems = [
         class="flex items-center justify-center gap-2 mt-3 px-4 py-3 bg-accent hover:bg-accent-dark text-white font-medium rounded-full transition-colors"
       >
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-        立即致電 {STORE_INFO.phoneDisplay}
+        立即致电 {STORE_INFO.phoneDisplay}
       </a>
     </div>
   </div>
